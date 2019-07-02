@@ -5,7 +5,7 @@ from app import db
 class UserModelTest(unittest.TestCase):
 
     def setUp(self):
-        self.new_user = User(password = 'banana')
+        self.new_user = User(password = 'SethOmbae1')
 
     def test_password_setter(self):
         self.assertTrue(self.new_user.password_hash is not None)
@@ -15,7 +15,7 @@ class UserModelTest(unittest.TestCase):
             self.new_user.password
 
     def test_password_verification(self):
-        self.assertTrue(self.new_user.verify_password('banana'))
+        self.assertTrue(self.new_user.verify_password('SethOmbae1'))
 
 class ReviewTest(unittest.TestCase):
     def setUp(self):
