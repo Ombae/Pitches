@@ -25,5 +25,9 @@ This project was generated using python version 3.6. This project allows users t
 
 ## Further help
 To get more help on the Python CLI use ng help or go check out the Python CLI README and Python documentation. You may also read the news API documentation on the news API website.
+
+## License
+MIT &copy;2017 [Seth Ombae](https://github.com/Ombae/Pitches/blob/master/LICENSE)
+
 ## CONTACT INFORMATION
 For further discussions, contact me on : ombaejr@gmail.com
