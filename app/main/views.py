@@ -15,12 +15,12 @@ def index():
 	'''
 	inde=Pitches.query.all()
 
-	
+
 
 	return render_template('index.html',index=inde)
 
 
-	
+
 
 @main.route('/pitches', methods = ['GET','POST'])
 @login_required
@@ -42,7 +42,7 @@ def new_comment():
 		comment = Comments (comment=form.comment.data)
 		comment.save_comments()
 		return redirect(url_for('main.index'))
-	return render_template('comments.html',form=form)	
+	return render_template('comments.html',form=form)
 
 
 
@@ -52,8 +52,12 @@ def new_comment():
 
 
 
-# We first import the abort function, that stops a request, and returns a response according to the status code passed in. We then create a dynamic route that is handled by the profile view function.
-# We then query the database to find the user according to the username passed. If no user is found the abort is called and a 404 status code is returned as a response. If a user is found we render a template and pass in the user as a variable.
+# We first import the abort function, that stops a request, and returns a response
+#according to the status code passed in. We then create a dynamic route that is
+#handled by the profile view function.
+# We then query the database to find the user according to the username passed.
+#If no user is found the abort is called and a 404 status code is returned as a response.
+#If a user is found we render a template and pass in the user as a variable.
 
 @main.route('/user/<uname>')
 def profile(uname):
@@ -67,9 +71,12 @@ def profile(uname):
 
 
 
-# We create a update_pitches view function that takes in a username, and instantiates the UpdatePitches form class.
+# We create a update_pitches view function that takes in a username, and instantiates
+#the UpdatePitches form class.
 # We query the database to find a user with the same username.
-# If the form is validated we update the content of the user.bio property to fill in what the user has submitted and redirect the user back to the pitches page where he can see the new bio.
+# If the form is validated we update the content of the user.bio property to fill in
+#what the user has submitted and redirect the user back to the pitches page where he 
+#can see the new bio.
 # If not we render the _update.html_ template and pass in the form instance.
 
 
@@ -94,7 +101,7 @@ def update_pitches(uname):
 
 		return redirect(url_for('.profile',uname=user.username))
 
-	return render_template('profile/pitches.html',form =form)	
+	return render_template('profile/pitches.html',form =form)
 
 
 
@@ -120,22 +127,4 @@ def update_comments(uname):
 
 		return redirect(url_for('.profile',uname=user.username))
 
-	return render_template('profile/comments.html',form =form)	
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
+	return render_template('profile/comments.html',form =form)
