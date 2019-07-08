@@ -1,71 +1,106 @@
-{% extends 'base.html' %}
+{% extends 'base.html'%} 
+
 {% block content %}
-<style>
- #test{
-    font-size:20px;
-    text-decoration:none;
-    padding-top: 10px;
-    background: #E91E63;
-    color:white;
-  }
 
-  #header{
-    font-size:40px;
-    text-align: center;
-  }
 
-  h6{
-    font-size: 25px;
-  }
+<body style="background-image: url('https://d1bj7rf5q0zm9k.cloudfront.net/images/awesoundapp/2015/a9c11a5e-105d-44a2-8376-900cab6cddb3/pitch-podcast-v01.jpg'); background-repeat: no-repeat; background-size: cover;">
+    
 
-  #test2{
-    font-size:20px;
-    text-decoration:none;
-    padding-top: 10px;
-    background: #E91E63;
-    color:white;
-    margin-left: 15px;
-  }
-
-  #test2,#test:hover{
-    cursor: pointer;
-    background:#00BCD4;
-  }
-  #test2:hover{
-    background:#E91E63;
-  }
-</style>
-<div class="view" style="background-image: url('https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); background-repeat: no-repeat; background-size: cover; background-position: center center; height:100vh;color:white;background-attachment: fixed;">
-    <!-- Mask & flexbox options-->
-    <div class="mask rgba-gradient align-items-center">
-      <!-- Content -->
-      <div class="container">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s" id="header">
-
-            <h1 class="h1-responsive font-weight-bold mt-sm-5" >Welcome to Pitches <span style="color:#E91E63">Pitch</span> </h1>
-            <hr class="hr-light">
-            <br>
-
-            <h6 class="mb-4">The Site that allows you to make Instant Pitches in whatever category you want.</h6>
-            <br>
-            <a class="btn btn-outline-info" id="test" href="{{url_for('auth.login')}}" >Log In<i class="fas fa-arrow-right"></i></a>
-            <a class="btn btn-outline-info" href="{{url_for('auth.register')}}" id="test2">Sign In</a>
-          </div>
-          <!--Grid column-->
-          <!--Grid column-->
-
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjj_oLa2prjAhVShxoKHUqyAocQjRx6BAgBEAU&url=https%3A%2F%2Fpngtree.com%2Fso%2Fmen-model&psig=AOvVaw3-bDzQX_mRsbZHY2kwuyqy&ust=1562310607089280" class="card-img" alt="seth">
       </div>
-      <!-- Content -->
+      <div class="col-md-8">
+        <div class="card-body">
+          <h1 class="card-title">Seth</h1>
+          <p class="card-text">Programs must be written for people to read, and only incidentally for machines to execute.</p>
+          <p class="card-text">Good</p>
+          <p class="card-text"><small class="text-muted">Last updated 10 mins ago</small></p>
+          <button type="button" class="btn btn-light"><a href ="/pitches">Add Pitch</a></button>
+          <button type="button" class="btn btn-light"><a href ="/comments">Comment</a></button>
+        </div>
+      </div>
     </div>
-    <!-- Mask & flexbox options-->
+</div>
+
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="http://www.sclance.com/pngs/models-png/models_png_887892.png" class="card-img" alt="Calvo">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h1 class="card-title">Carlvo</h1>
+        <p class="card-text">To Be The Best You Need The Best.</p>
+        <p class="card-text">Wooow!!!!</p>
+        <p class="card-text"><small class="text-muted">Last updated 8 mins ago</small></p>
+        <button type="button" class="btn btn-light"><a href ="/pitches">Add Pitch</a></button>
+        <button type="button" class="btn btn-light"><a href ="/comments">Comment</a></button>
+      </div>
+    </div>
   </div>
-  <!-- Full Page Intro -->
+</div>
+
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="https://taukeereditz.com/wp-content/uploads/2019/03/Taukeer-Eagle-model.png" class="card-img" alt="joseph">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h1 class="card-title">Joseph</h1>
+          <p class="card-text">Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.</p>
+          <p class="card-text">Cool</p>
+          <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
+          <button type="button" class="btn btn-light"><a href ="/pitches">Add Pitch</a></button>
+          <button type="button" class="btn btn-light"><a href ="/comments">Comment</a></button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="https://www.flare.com/wp-content/uploads/2015/02/Ronald-Epps-Instagram.png" class="card-img" alt="Josiah">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h1 class="card-title">Josiah</h1>
+          <p class="card-text">The best decisions aren’t made with your mind, but with your instinct.</p>
+          <p class="card-text">Really?</p>
+          <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
+          <button type="button" class="btn btn-light"><a href ="/pitches">Add Pitch</a></button>
+          <button type="button" class="btn btn-light"><a href ="/comments">Comment</a></button>
+        </div>
+      </div>
+    </div>
+</div>
+
+{% for x in index %}
 
 
-{% endblock %}
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="https://fmdataba.com/images/p/4348.png" class="card-img" alt="pogba">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h1 class="card-title">{{x.body}}</h1>
+        <p class="card-text">{{x.category}}</p>
+        <p class="card-text">{{x.Comment}}</p>
+        <p class="card-text"><small class="text-muted">Last updated 2 mins ago</small></p>
+        <button type="button" class="btn btn-light"><a href ="/pitches">Add Pitch</a></button>
+        <button type="button" class="btn btn-light"><a href ="/comments">Comment</a></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+{% endfor %}
+{%endblock%}

@@ -1,40 +1,17 @@
 {% extends 'base.html' %}
-{% import 'bootstrap/wtf.html' as wtf%}
-{% block content%}
+{% import 'bootstrap/wtf.html' as wtf %}
 
-<style>
- body{
+{% block content %}
+<div class="container">
+<div class="row">
+<div class="col-md-2"> </div>
+<div class="col-md-8">
 
-   color: #E91E63;
-   font-size: 18px;
-   background-repeat: no-repeat;
-   background-size: cover;
-   height:100vh;
-   width:100%;
-   font-weight: lighter;
- }
- .card{
-   text-align: center;
-   width:500px;
-   top:50%;
-   left:50%;
-   transform: translate(-50%,-50%);
-   border:3px #E91E63;
-   position: absolute;
- }
- h3{
-   color: #00B8D4;
- }
+{{wtf.quick_form(registration_form)}}
 
-</style>
-    <div class="container">
-        <!-- Material form login -->
-        <div class="row">
-          <div class="text text-center" >
-            <div class="card">
-              <h3>SIGN UP</h3>
-              {{wtf.quick_form(registration_form)}}
-          </div>
-        </div>
+</div>
+<div class="col-md-2"></div>
+</div>
+</div>
 
 {% endblock %}

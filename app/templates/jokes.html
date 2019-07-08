@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+
+<h1>Jokes Pitches</h1>
+{% if jokes_pitch %}
+{% for pitch in jokes_pitch %}
+
+<div class="card">
+  <p>{{pitch.title}}</p>
+  <p>By:{{pitch.post}}</p> 
+  <p>{{pitch.posted}}</p>
+</div>
+
+{% endfor %}
+<a class="btn btn-success btn-lg text-center" href="/new_pitches"> Add a new pitch</a>
+
+{% else%}
+<h2 class="text-center">No pitches </h2>
+
+
+<a class="btn btn-success btn-lg text-center" href="/new_pitches"> Add a new pitch</a>
+{% endif %}
+{% endblock%}
